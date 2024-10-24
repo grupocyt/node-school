@@ -10,7 +10,8 @@ const api = Router()
 
 
  
-api.get( "/hola", checkSchemaHolaMundo, GetHolaMundoFunction )
-api.post( "/hola", checkSchemaHolaMundo, [verifyToken], PostHolaMundoFunction )
+api.get( "/calculadora", GetHolaMundoFunction )
+api.post( "/calculadora", PostHolaMundoFunction )
+
 
 export default api
