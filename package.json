@@ -1,6 +1,5 @@
 {
-  "name": "node-school",
-  "version": "1.0",
+  "name": "school",
   "description": "Node API escuela Grupo Cañas y Tapas",
   "main": "app.js",
   "scripts": {
@@ -73,5 +72,6 @@
     "@types/winston": "^2.4.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
-  }
+  },
+  "version": "1.0.0"
 }

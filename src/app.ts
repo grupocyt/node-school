@@ -14,6 +14,7 @@ import { ca_bundle_ssl, ca_cert_ssl, cert_ssl, key_ssl, MODE,
          PROTOCOL } from './config'
 
 import api from './api/routes'
+import users from './api/users/routes'
  
 class ServerApiNode {
     constructor(){ 
@@ -56,7 +57,8 @@ class ServerApiNode {
    
             
             // rutas del proyecto
-            app.use( "/v1",  api ) 
+            app.use( "/v1", api ) 
+            app.use( "/users", users ) 
               
  
             app.get( "/",  (req, res) => {
