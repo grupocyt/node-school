@@ -1,9 +1,8 @@
 # Node API Escuela Grupo Cañas y Tapas
 
 Node Escuela API module.
-Esto es una prueba 
+Esto es una prueba para aprender
 
-para aprender
 
 ## Versionar en git
 
