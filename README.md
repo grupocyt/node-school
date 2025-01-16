@@ -9,11 +9,8 @@ para aprender
 
 ```bash
 new -  nueva funcionalidad	
-
 enhance - mejoras en alguna funcionalidad
-
 fix -  arreglar alguna funcionalidad 
-
 remove - eliminar funcionalidad
 
 ```
