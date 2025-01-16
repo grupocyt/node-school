@@ -17,7 +17,7 @@ path_plublic     = 'c:/carpeta/path_plublic'
 
 # Contraseñas de correo elextrónico 
 email_host = 'host'
-email_port = 1234
+email_port = 1234000000001
 email_secure = false 
 email_user = 'email@correo.es'
 email_pass = 'clave_de_aplicacion'
