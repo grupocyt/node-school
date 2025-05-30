@@ -5,7 +5,7 @@ import { checkSchemaHolaMundo } from './validator/index.validator'
 
 import { GetHolaMundoFunction } from './index.api'
  
-const api = Router()
+ const api = Router()
 
 api.get( "/hola",   checkSchemaHolaMundo,   [verifyToken],  GetHolaMundoFunction )
  
