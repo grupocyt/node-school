@@ -1,11 +1,9 @@
-import dotenv from 'dotenv'
-dotenv.config()
-
+ 
 
 // # Configuraciones basicas de aplicacion 
-export const PORT = process.env.PORT
-export const MODE = process.env.MODE
-export const PROTOCOL = process.env.PROTOCOL
+export const PORT = 3200
+export const MODE = "developer"
+export const PROTOCOL: "http" | "https"= 'http'
 export const VERSION = "1.0"
 
 // # Contraseñas generales de aplicación
