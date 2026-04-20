@@ -1,10 +1,10 @@
 import { Router } from 'express'
-import traductor from './traductor/routes'
+import DtoTraducciones from './DtoTraducciones/routes'
 
  
  const api = Router()
 
-api.use( '/traductor', traductor)
+api.use( '/DtoTraducciones',  DtoTraducciones)
      
    
             
