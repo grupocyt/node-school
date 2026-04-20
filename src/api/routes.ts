@@ -1,13 +1,10 @@
 import { Router } from 'express'
+import traductor from './traductor/routes'
 
-//import { verifyToken } from '../decorator/http/protected.decorator'
-import { checkSchemaHolaMundo } from './validator/index.validator'
-
-import { GetHolaMundoFunction } from './index.api'
  
  const api = Router()
 
-api.get( "/hola",   checkSchemaHolaMundo,     GetHolaMundoFunction )
+api.use( '/traductor', traductor)
      
    
             

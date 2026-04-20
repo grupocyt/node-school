@@ -1,9 +1,8 @@
 import { Router } from 'express' 
 import { HolaFunction } from './index.api'
-import { checkHola } from './validations'
+  
+const traductor = Router()
  
-const auth = Router()
+traductor.get( '/hola',          HolaFunction )
  
-auth.get( '/hola',      checkHola,       HolaFunction )
- 
-export default auth  
+export default traductor   
