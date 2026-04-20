@@ -7,7 +7,6 @@ import helmet from 'helmet'
 import compression from 'compression'
 import cors from 'cors'
 
-import { htmlHome } from './utility/index.utility'
 import { ca_bundle_ssl, ca_cert_ssl, cert_ssl, key_ssl, MODE, 
          path_certificado, 
          PORT, 
@@ -16,6 +15,7 @@ import { ca_bundle_ssl, ca_cert_ssl, cert_ssl, key_ssl, MODE,
 import api from './api/routes'
  
 class ServerApiNode {
+
     constructor(){ 
         this.App()
     }  
@@ -30,6 +30,7 @@ class ServerApiNode {
             ]
         }   
     }
+    
     App(){
         // Inicializamos express y creamos el servidor HTTP
         const app = express()        
@@ -60,7 +61,7 @@ class ServerApiNode {
               
  
             app.get( "/",  (req, res) => {
-                 res.status(200).send(htmlHome)                
+                 res.status(200).send("node-shcoll")                
             })
 
             //Retorna respuesta por defecto
