@@ -4,5 +4,5 @@ export async function HolaTraduccionFunction( req:express.Request, res:express.R
  
        const hola:string = "hello";
 
-    return res.status(200).send( hola  ) 
+    return res.status(200).send(hola) 
 } 

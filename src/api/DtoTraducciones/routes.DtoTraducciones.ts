@@ -1,4 +1,4 @@
-import { Router } from 'express' 
+import { Router } from 'express';
 import { HolaTraduccionFunction } from './archivero.traducciones'
    
 const DtoTraducciones = Router()
