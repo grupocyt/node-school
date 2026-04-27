@@ -1,26 +1,19 @@
-import { Request, Response } from 'express';
+import express from 'express'
 
-export const SumaFunction = (req: Request, res: Response) => {
-    const { a, b } = req.query;
-    const resultado = Number(a) + Number(b);
-    res.json({ resultado });
-};
+export async function ObtenerResultadoFunction( req:express.Request, res:express.Response ) {
 
-export const RestaFunction = (req: Request, res: Response) => {
-    const { a, b } = req.query;
-    const resultado = Number(a) - Number(b);
-    res.json({ resultado });
-};
+        const respuesta:string = "Resultado de la operacion de la calculadora";
 
-export const MultiplicacionFunction = (req: Request, res: Response) => {
-    const { a, b } = req.query;
-    const resultado = Number(a) * Number(b);
-    res.json({ resultado });
-};
+    return res.status(200).send(respuesta)
+}
 
-export const DivisionFunction = (req: Request, res: Response) => {
-    const { a, b } = req.query;
-    if (Number(b) === 0) return res.status(400).json({ error: 'No se puede dividir entre 0' });
-    const resultado = Number(a) / Number(b);
-    res.json({ resultado });
-};
+export async function CalcularOperacionFunction( req:express.Request, res:express.Response ) {
+const respuesta = {
+    mensaje:"Se ha realizado la operacion correctamente. Estos son los datos de la suma ficticia",
+    operacion:"Suma",
+    resultado:"0",
+    datosOperacion:req.body
+}
+
+    return res.status(200).send(respuesta)
+}

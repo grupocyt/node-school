@@ -1,16 +1,9 @@
 import { Router } from 'express';
-import {
-    ObtenerEmpleadosFunction,
-    ObtenerEmpleadoFunction,
-    CrearEmpleadoFunction,
-    EliminarEmpleadoFunction
-} from './archivero.RecursosHumanos';
+import { ObtenerEmpleadosFunction, ContratarEmpleadoFunction } from './archivero.RecursosHumanos';
 
-const DtoRecursosHumanos = Router();
+const DtoRecursosHumanos = Router()
 
-DtoRecursosHumanos.get('/',         ObtenerEmpleadosFunction);
-DtoRecursosHumanos.get('/:id',      ObtenerEmpleadoFunction);
-DtoRecursosHumanos.post('/',        CrearEmpleadoFunction);
-DtoRecursosHumanos.delete('/:id',   EliminarEmpleadoFunction);
+DtoRecursosHumanos.get('/empleados', ObtenerEmpleadosFunction)
+DtoRecursosHumanos.post('/empleados', ContratarEmpleadoFunction)
 
-export default DtoRecursosHumanos;
+export default DtoRecursosHumanos

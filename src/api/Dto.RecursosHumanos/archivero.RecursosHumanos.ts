@@ -1,25 +1,19 @@
-import { Request, Response } from 'express';
+import express from 'express'
 
-export const ObtenerEmpleadosFunction = (req: Request, res: Response) => {
-    const empleados = [
-        { id: 1, nombre: 'Juan García', puesto: 'Desarrollador', salario: 2000 },
-        { id: 2, nombre: 'María López', puesto: 'Diseñadora', salario: 1800 },
-        { id: 3, nombre: 'Carlos Martín', puesto: 'Analista', salario: 2200 },
-    ];
-    res.json(empleados);
-};
+export async function ObtenerEmpleadosFunction( req:express.Request, res:express.Response ) {
 
-export const ObtenerEmpleadoFunction = (req: Request, res: Response) => {
-    const { id } = req.params;
-    res.json({ id, nombre: 'Juan García', puesto: 'Desarrollador', salario: 2000 });
-};
+        const respuesta:string = "Lista de empleados de Recursos Humanos";
 
-export const CrearEmpleadoFunction = (req: Request, res: Response) => {
-    const { nombre, puesto, salario } = req.body;
-    res.status(201).json({ mensaje: 'Empleado creado', nombre, puesto, salario });
-};
+    return res.status(200).send(respuesta)
+}
 
-export const EliminarEmpleadoFunction = (req: Request, res: Response) => {
-    const { id } = req.params;
-    res.json({ mensaje: `Empleado con id ${id} eliminado` });
-};
+export async function ContratarEmpleadoFunction( req:express.Request, res:express.Response ) {
+const respuesta = {
+    mensaje:"Usted ha contratado a un nuevo empleado. Estos son sus datos",
+    departamento:"Recursos Humanos",
+    fechaInicio:"17PM",
+    datosEmpleado:req.body
+}
+
+    return res.status(200).send(respuesta)
+}

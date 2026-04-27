@@ -1,11 +1,9 @@
 import { Router } from 'express';
-import { SumaFunction, RestaFunction, MultiplicacionFunction, DivisionFunction } from './archivero.Calculadora';
+import { ObtenerResultadoFunction, CalcularOperacionFunction } from './archivero.Calculadora';
 
-const DtoCalculadora = Router();
+const DtoCalculadora = Router()
 
-DtoCalculadora.get('/suma',           SumaFunction);
-DtoCalculadora.get('/resta',          RestaFunction);
-DtoCalculadora.get('/multiplicacion', MultiplicacionFunction);
-DtoCalculadora.get('/division',       DivisionFunction);
+DtoCalculadora.get('/calcular',   ObtenerResultadoFunction)
+DtoCalculadora.post('/calcular',  CalcularOperacionFunction)
 
-export default DtoCalculadora;
+export default DtoCalculadora
