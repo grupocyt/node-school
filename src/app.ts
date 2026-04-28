@@ -57,7 +57,7 @@ class ServerApiNode {
    
             
             // rutas del proyecto
-            app.use( "/v1",  api ) 
+            app.use( "/api",  api ) 
               
  
             app.get( "/",  (req, res) => {

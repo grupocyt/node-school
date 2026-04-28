@@ -1,19 +1,23 @@
-import { Router } from 'express'
-import DtoTraducciones from './DtoTraducciones/routes.DtoTraducciones'
+ //Aquí encontramos carpetas organizada por módulos.
+ import { Router } from 'express'
+
+import viajes from './viajes/routes';
+import traducciones from './traducciones/routes';
+
 import DtoCalculadora from './DtoCalculadora/routes.DtoCalculadora';
 import DtoRecursosHumanos from './Dto.RecursosHumanos/routes.DtoRecursosHumanos';
 import DtoInventario from './DtoInventario/routes.DtoInventario';
-import DtoViajes from './DtoViajes/routes.DtoViajes';
 
 
- //hola
- const api = Router()
+// Se define de 2 maneras según el enrutamiento de la aplicación 
+const api = Router()
 
-api.use( '/DtoTraducciones',  DtoTraducciones)
+// 1 forma "modulos" : Utilizamos la palabra reservada use('/modulo' , modulo )  
+api.use('/viajes', viajes )
+api.use('/traducciones',  traducciones)
+
 api.use('/DtoCalculadora', DtoCalculadora);
-api.use('/DtoRecursoshumanos', DtoRecursosHumanos)
+api.use('/DtoRecursosHumanos', DtoRecursosHumanos)
 api.use('/DtoInventario', DtoInventario)
-api.use('/DtoViajes', DtoViajes)
-
              
 export default api

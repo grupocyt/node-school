@@ -1,9 +1,10 @@
 import { Router } from 'express';
-import { MadridBarcelonafunction, ComprarVueloMadridBarcelonaFunction } from './archivero.Viajes';
-   
-const DtoViajes = Router()
+import { ComprarVueloMadridBarcelonaFunction, MadridBarcelonafunction } from './viajes.api';
+
+ const viajes = Router()
  
-DtoViajes.get('/ma-bc', MadridBarcelonafunction)
-DtoViajes.post('/ma-bc', ComprarVueloMadridBarcelonaFunction)
+// 2 forma "rutas": utilizamos las palabras reservadas GET, POST, PATCH, DELETE, PUT, HEADER para conectar con la funcion
+viajes.get('/ma-bc', MadridBarcelonafunction)
+viajes.post('/ma-bc', ComprarVueloMadridBarcelonaFunction)
  
-export default DtoViajes  
+export default viajes  
