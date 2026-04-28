@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { HolaTraduccionFunction } from './archivero.traducciones'
+import { HolaTraduccionFunction } from './traducciones.api'
    
 const traducciones = Router()
  

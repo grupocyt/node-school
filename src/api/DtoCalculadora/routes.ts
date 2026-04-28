@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { ObtenerResultadoFunction, CalcularOperacionFunction } from './archivero.Calculadora';
+import { ObtenerResultadoFunction, CalcularOperacionFunction } from './calculadora.api';
 
 const DtoCalculadora = Router()
 

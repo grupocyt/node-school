@@ -1,6 +1,5 @@
 import { Router } from 'express';
-import { ObtenerInventarioFunction, AgregarProductoFunction } from './archivero.Inventario';
-
+import { ObtenerInventarioFunction, AgregarProductoFunction } from './inventario.api';
 const DtoInventario = Router()
 
 DtoInventario.get('/inventario',  ObtenerInventarioFunction)
