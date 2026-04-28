@@ -7,6 +7,7 @@ import traducciones from './traducciones/routes';
 import DtoCalculadora from './DtoCalculadora/routes';
 import DtoRecursosHumanos from './Dto.RecursosHumanos/routes.DtoRecursosHumanos';
 import DtoInventario from './DtoInventario/routes';
+import avion from './avion/routes';
 
 
 // Se define de 2 maneras según el enrutamiento de la aplicación 
@@ -18,5 +19,6 @@ api.use('/traducciones',  traducciones)
 api.use('/DtoCalculadora', DtoCalculadora);
 api.use('/DtoRecursosHumanos', DtoRecursosHumanos)
 api.use('/DtoInventario', DtoInventario)
+api.use('/avion', avion)
              
 export default api
