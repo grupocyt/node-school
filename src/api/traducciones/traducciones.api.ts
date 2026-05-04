@@ -4,6 +4,7 @@ export async function HolaTraduccionFunction( req:express.Request, res:express.R
  
        const hola:string = "hello";
 
+<<<<<<< HEAD:src/api/DtoTraducciones/archivero.traducciones.ts
     return res.status(200).send( hola  ) 
 } 
 export async function comoestasTraduccionFunction( req:express.Request, res:express.Response ) {
@@ -25,4 +26,7 @@ export async function estaslocoTraduccionFunction( req:express.Request, res:expr
        const estasloco:string = "you are crazy";
 
     return res.status(200).send( estasloco ) 
+=======
+    return res.status(200).send(hola) 
+>>>>>>> 31becc9ed4b2e5476c01344502b40b76b30b06ca:src/api/traducciones/traducciones.api.ts
 } 
