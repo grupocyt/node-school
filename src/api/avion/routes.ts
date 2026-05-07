@@ -1,9 +1,8 @@
 import { Router } from 'express';
 
-import { InfoAvionFunction, ObtenerInfoAvionFunction  } from './avion.api';
+import { DespegarFunction  } from './avion.api';
 const avion = Router()
 
-avion.get('/avion',  ObtenerInfoAvionFunction)
-avion.post('/avion', InfoAvionFunction)
-
+avion.get('/despegar',  DespegarFunction)
+ 
 export default avion
