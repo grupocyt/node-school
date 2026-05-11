@@ -1,26 +1,28 @@
 import express from 'express'
 
-export async function RegistrarMoteroFunction( req:express.Request, res:express.Response ) {
-    const respuesta:string = "informacion del motero solicitada";
-    return res.status(200).send(respuesta)
+import { MoteroController } from '../../controllers/moteros/moteros.controller';
+
+export async function RegistrarMoteroFunction( req:express.Request, res:express.Response ) {  
+    const controlador = await new MoteroController().registrarmotero(req.body.nombre)
+    return res.status(200).send(controlador)
 }
 
 export async function SacarMoteroDelGrupoFunction( req:express.Request, res:express.Response ) {
-    const respuesta:string = "motero eliminado del grupo correctamente";
-    return res.status(200).send(respuesta)
+    const controlador = await new MoteroController().sacardelgrupo(req.body.nombre)
+    return res.status(200).send(controlador)
 }
 
 export async function ObtenerInfoMoteroFunction( req:express.Request, res:express.Response ) {
-    const respuesta:string = "informacion del motero solicitada";
-    return res.status(200).send(respuesta)
+    const controlador = await new MoteroController().obtenerinfo(req.body.nombre)
+    return res.status(200).send(controlador)
 }
 
 export async function RepostarMotoFunction( req:express.Request, res:express.Response ) {
-    const respuesta:string = "moto repostada correctamente";
-    return res.status(200).send(respuesta)
+    const controlador = await new MoteroController().repostar(req.body.nombre)
+    return res.status(200).send(controlador)
 }
 
 export async function CambiarLlantasFunction( req:express.Request, res:express.Response ) {
-    const respuesta:string = "Se han cambiado las llantas correctamente";
-    return res.status(200).send(respuesta)
+    const controlador =  await new MoteroController().cambiarllantas(req.body.nombre)
+    return res.status(200).send(controlador)
 }
