@@ -4,9 +4,9 @@ import { obtenerinfocamarero, obtenerinfofuncionesdelcamarero, obtenerinfohorari
 
 const camarero = Router()
 
-mecanica.get('/obtenerinfocamarero',                             obtenerinfocamarero)
-mecanica.get(`/obtenerinfofuncionesdelcamarero`,                 obtenerinfofuncionesdelcamarero)
-mecanica.get(`/obtenerinfohorariocamarero`,                      obtenerinfohorariocamarero )
-mecanica.get(`/obtenerinfopuestodelcamarero`,                    obtenerinfopuestodelcamarero )
+camarero.get('/obtenerinfocamarero',                             obtenerinfocamarero)
+camarero.get(`/obtenerinfofuncionesdelcamarero`,                 obtenerinfofuncionesdelcamarero)
+camarero.get(`/obtenerinfohorariocamarero`,                      obtenerinfohorariocamarero )
+camarero.get(`/obtenerinfopuestodelcamarero`,                    obtenerinfopuestodelcamarero )
 
 export default camarero
