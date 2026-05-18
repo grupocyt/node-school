@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { obtenerinfocamarero, obtenerinfofuncionesdelcamarero, obtenerinfohorariocamarero, obtenerinfopuestodelcamarero,} from './Camareros.api';
+import { obtenerinfocamarero, obtenerinfofuncionesdelcamarero, obtenerinfohorariocamarero, obtenerinfopuestodelcamarero,} from './camarero.api';
  
 
 const camarero = Router()
