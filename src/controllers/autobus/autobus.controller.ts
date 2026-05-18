@@ -10,7 +10,7 @@ export class autobuscontroller {
         return respuesta;
     }
 
-  async obtenerinfopuestodelcamarero () : Promise<string> {
+  async obtenerinforecorrido () : Promise<string> {
         const respuesta:string = `Informacion del puesto del recorrido del autobus`;
         return respuesta;
     }
