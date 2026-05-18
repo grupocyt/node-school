@@ -2,6 +2,8 @@ import { Router } from 'express';
 import avion from './avion/routes';
 import calculadora from './calculadora/routes';
 import camarero from './camarero/routes';
+import inventario from './inventario/routes';
+import mecanica from './mecanica/routes';
 
 
 const api = Router()
@@ -10,5 +12,9 @@ const api = Router()
 api.use('/avion', avion)
 api.use('/calculadora', calculadora)
 api.use('/camarero', camarero)
+api.use('/inventario', inventario)
+api.use('/mecanica', mecanica)
+
+
 
 export default api
