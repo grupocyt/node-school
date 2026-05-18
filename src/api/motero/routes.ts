@@ -9,10 +9,10 @@ import {
 
 const motero = Router()
 
-motero.get('/moteros',           ObtenerInfoMoteroFunction)
-motero.post('/moteros',          RegistrarMoteroFunction)
-motero.delete('/moteros',        SacarMoteroDelGrupoFunction)
-motero.patch('/moteros/repostar',RepostarMotoFunction)
-motero.patch('/moteros/llantas', CambiarLlantasFunction)
+motero.get('/moteros',              ObtenerInfoMoteroFunction)
+motero.post('/moteros',             RegistrarMoteroFunction)
+motero.delete('/moteros',           SacarMoteroDelGrupoFunction)
+motero.patch('/moteros/repostar',   RepostarMotoFunction)
+motero.patch('/moteros/llantas',    CambiarLlantasFunction)
 
 export default motero
