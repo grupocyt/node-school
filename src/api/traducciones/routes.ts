@@ -1,8 +1,14 @@
-import { Router } from 'express';
-import { HolaTraduccionFunction } from './traducciones.api'
+import { Router } from 'express' 
+import { comoestasTraduccionFunction, estaslocoTraduccionFunction, HolaTraduccionFunction, queedadtienesTraduccionFunction } from './traducciones.api'
    
-const traducciones = Router()
+const DtoTraducciones = Router()
  
-traducciones.get( '/hola',          HolaTraduccionFunction )
+DtoTraducciones.get( '/hola',          HolaTraduccionFunction )
+DtoTraducciones.get( '/comoestas',     comoestasTraduccionFunction )
+DtoTraducciones.get( '/quedadtienes',     queedadtienesTraduccionFunction )
+DtoTraducciones.get( '/estasloco',     estaslocoTraduccionFunction )
+
+
+
  
-export default traducciones   
+export default DtoTraducciones   
