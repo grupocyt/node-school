@@ -8,6 +8,7 @@ import motero from './motero/routes';
 import pelicula from './pelicula/routes';
 import recursosHumanos from './recursos-humanos/routes';
 import traduccion from './traduccion/routes';
+import viaje from './viaje/routes';
 
 
 const api = Router()
@@ -22,7 +23,6 @@ api.use('/motero', motero)
 api.use('/pelicula', pelicula)
 api.use('/recursos/humanos', recursosHumanos)
 api.use('/traduccion', traduccion)
-
-
+api.use('/viaje',viaje)
 
 export default api
