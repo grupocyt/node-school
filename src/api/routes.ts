@@ -6,6 +6,7 @@ import inventario from './inventario/routes';
 import mecanica from './mecanica/routes';
 import motero from './motero/routes';
 import pelicula from './pelicula/routes';
+import recursosHumanos from './recursos-humanos/routes';
 
 
 const api = Router()
@@ -18,6 +19,7 @@ api.use('/inventario', inventario)
 api.use('/mecanica', mecanica)
 api.use('/motero', motero)
 api.use('/pelicula', pelicula)
+api.use('/recursos/humanos', recursosHumanos)
 
 
 
