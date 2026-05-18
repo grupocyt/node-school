@@ -1,8 +1,9 @@
 import { Router } from 'express';
 import { ObtenerInventarioFunction, AgregarProductoFunction } from './inventario.api';
-const DtoInventario = Router()
 
-DtoInventario.get('/inventario',  ObtenerInventarioFunction)
-DtoInventario.post('/inventario', AgregarProductoFunction)
+const inventario = Router()
 
-export default DtoInventario
+inventario.get('/inventario',  ObtenerInventarioFunction)
+inventario.post('/inventario', AgregarProductoFunction)
+
+export default inventario
