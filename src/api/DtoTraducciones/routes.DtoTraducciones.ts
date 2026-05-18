@@ -1,5 +1,5 @@
 import { Router } from 'express' 
-import { comoestasTraduccionFunction, estaslocoTraduccionFunction, HolaTraduccionFunction, queedadtienesTraduccionFunction } from './archivero.traducciones'
+import { comoestasTraduccionFunction, estaslocoTraduccionFunction, HolaTraduccionFunction, queedadtienesTraduccionFunction } from '../traducciones/traducciones.api'
    
 const DtoTraducciones = Router()
  

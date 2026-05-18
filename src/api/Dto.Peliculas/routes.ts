@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { obtenerinfopelicula, obtenersinopsispelicula, obtenerpreciopelicula, obtenercalificacionedad, obtenerlocalizquierdo } from './mecanica.api';
+import { obtenercalificacionedad, obtenerinfopelicula, obtenerpreciopelicula, obtenersinopsispelicula } from './Peliculas.api';
  
 
 const peliculas = Router()
