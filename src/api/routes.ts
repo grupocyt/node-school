@@ -9,6 +9,7 @@ import pelicula from './pelicula/routes';
 import recursosHumanos from './recursos-humanos/routes';
 import traduccion from './traduccion/routes';
 import viaje from './viaje/routes';
+import autobus from './autobus/routes';
 
 
 const api = Router()
@@ -24,5 +25,6 @@ api.use('/pelicula', pelicula)
 api.use('/recursos/humanos', recursosHumanos)
 api.use('/traduccion', traduccion)
 api.use('/viaje',viaje)
+api.use('/autobus', autobus)
 
 export default api
