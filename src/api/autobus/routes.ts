@@ -4,7 +4,7 @@ import { obtenerinfoautobusfunction, obtenerinfoestadoautobusfunction, obtenerin
 
 const autobus = Router()
 
-autobus.get('/obtenerinfoautobusfunction',                   obtenerinfoestadoautobusfunction)
+autobus.get('/obtenerinfoautobusfunction',                   obtenerinfoautobusfunction)
 autobus.get('/obtenerinfohorarios',                          obtenerinfohorariosfunction)
 autobus.get('/obtenerinforecorrido',                          obtenerinforecorridofunction)
 autobus.get('/obtenerinfoestadoautobus',                      obtenerinfoestadoautobusfunction)
