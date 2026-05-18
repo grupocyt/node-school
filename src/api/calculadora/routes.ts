@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import { ObtenerResultadoFunction, CalcularOperacionFunction } from './calculadora.api';
 
-const DtoCalculadora = Router()
+const calculadora = Router()
 
-DtoCalculadora.get('/calcular',   ObtenerResultadoFunction)
-DtoCalculadora.post('/calcular',  CalcularOperacionFunction)
+calculadora.get('/calcular',   ObtenerResultadoFunction)
+calculadora.post('/calcular',  CalcularOperacionFunction)
 
-export default DtoCalculadora
+export default calculadora
