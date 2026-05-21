@@ -5,17 +5,17 @@ export class peliculasController {
         return respuesta;
     }
 
-    async obtenersinopsispelicula () : Promise<string> {
+    async ObtenerSinopsisPelicula () : Promise<string> {
         const respuesta:string = "sinopsis";
         return respuesta;
     }
 
-    async obtenerpreciopelicula () : Promise<string> {
+    async ObtenerPrecioPelicula () : Promise<string> {
         const respuesta:string = "precio de la pelicula";
         return respuesta;
     }
 
-    async obtenercalificacionedad () : Promise<string> {
+    async ObtenerCalificacionEdad () : Promise<string> {
         const respuesta:string = "obtener edad recomendada";
         return respuesta;
     }
