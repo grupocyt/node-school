@@ -2,27 +2,31 @@ import express from 'express'
 
 import { MoteroController } from '../../controllers/moteros/moteros.controller';
 
-export async function RegistrarMoteroFunction( req:express.Request, res:express.Response ) {  
-    const controlador = await new MoteroController().registrarmotero(req.body.nombre)
-    return res.status(200).send(controlador)
-}
+export class MoteroApi {
 
-export async function SacarMoteroDelGrupoFunction( req:express.Request, res:express.Response ) {
-    const controlador = await new MoteroController().sacardelgrupo(req.body.nombre)
-    return res.status(200).send(controlador)
-}
+    async registrarMotero( req:express.Request, res:express.Response ) {  
+        const controlador = await new MoteroController().registrarMotero(req.body.nombre)
+        return res.status(200).send(controlador)
+    }
 
-export async function ObtenerInfoMoteroFunction( req:express.Request, res:express.Response ) {
-    const controlador = await new MoteroController().obtenerinfo(req.body.nombre)
-    return res.status(200).send(controlador)
-}
+    async sacarMoteroDelGrupo( req:express.Request, res:express.Response ) {
+        const controlador = await new MoteroController().sacarDelGrupo(req.body.nombre)
+        return res.status(200).send(controlador)
+    }
 
-export async function RepostarMotoFunction( req:express.Request, res:express.Response ) {
-    const controlador = await new MoteroController().repostar(req.body.nombre)
-    return res.status(200).send(controlador)
-}
+    async obtenerInfoMotero( req:express.Request, res:express.Response ) {
+        const controlador = await new MoteroController().obtenerInfo(req.body.nombre)
+        return res.status(200).send(controlador)
+    }
 
-export async function CambiarLlantasFunction( req:express.Request, res:express.Response ) {
-    const controlador =  await new MoteroController().cambiarllantas(req.body.nombre)
-    return res.status(200).send(controlador)
+    async repostarMoto( req:express.Request, res:express.Response ) {
+        const controlador = await new MoteroController().repostar(req.body.nombre)
+        return res.status(200).send(controlador)
+    }
+
+    async cambiarLlantas( req:express.Request, res:express.Response ) {
+        const controlador =  await new MoteroController().cambiarLlantas(req.body.nombre)
+        return res.status(200).send(controlador)
+    }
+
 }

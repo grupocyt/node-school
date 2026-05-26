@@ -5,17 +5,17 @@ export class MoteroController {
 //promise es la promesa de que devolvera el valor cuando lo tenga.
 //cosnt Es una variable constante, una vez definido su valor, no se puede reasignar ejem: (Nombre del motero).
 //Return Es la salida de la funcion, lo que devuelve despues de todo el proceso.
-    async registrarmotero ( nombre:string ) : Promise<string> {
+    async registrarMotero ( nombre:string ) : Promise<string> {
         const respuesta:string = `El motero ${nombre} ha sido registrado/a correctamente`;
         return respuesta;
     }
 
-    async sacardelgrupo ( nombre:string ) : Promise<string> {
+    async sacarDelGrupo ( nombre:string ) : Promise<string> {
         const respuesta:string = `El motero ${nombre} ha sido sacado del grupo correctamente`;
         return respuesta;
     }
 
-    async obtenerinfo ( nombre:string ) : Promise<string> {
+    async obtenerInfo ( nombre:string ) : Promise<string> {
         const respuesta:string = `Informacion del motero ${nombre}`;
         return respuesta;
     }
@@ -25,7 +25,7 @@ export class MoteroController {
         return respuesta;
     }
 
-    async cambiarllantas ( nombre:string ) : Promise<string> {
+    async cambiarLlantas ( nombre:string ) : Promise<string> {
         const respuesta:string = `Las llantas de la moto de ${nombre} han sido cambiadas correctamente`;
         return respuesta;
     }
