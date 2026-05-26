@@ -1,6 +1,6 @@
 import express from 'express'
 
-import { MoteroController } from '../../controllers/moteros/moteros.controller';
+import { MoteroController } from '../../controllers/motero/motero.controller';
 
 export class MoteroApi {
 
