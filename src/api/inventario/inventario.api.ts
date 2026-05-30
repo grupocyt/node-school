@@ -1,19 +1,27 @@
 import express from 'express'
 
-export async function ObtenerInventarioFunction( req:express.Request, res:express.Response ) {
+import { inventarioController} from '../../controllers/Inventario/inventario.controller';
 
-        const respuesta:string = "Lista de productos en el inventario";
+export class inventarioApi {
 
-    return res.status(200).send(respuesta)
-}
-
-export async function AgregarProductoFunction( req:express.Request, res:express.Response ) {
-const respuesta = {
-    mensaje:"Usted ha agregado un nuevo producto al inventario. Estos son sus datos",
-    almacen:"Almacen principal",
-    fechaIngreso:"17PM",
-    datosProducto:req.body
-}
-
-    return res.status(200).send(respuesta)
-}
+        async obtenerInventario( req:express.Request, res:express.Response ) {  
+            const controlador = await new inventarioController().obtenerInventario(req.body.nombre)
+            return res.status(200).send(controlador)
+        }
+    
+        async añadirProducto( req:express.Request, res:express.Response ) {
+            const controlador = await new inventarioController().añadirProducto(req.body.nombre)
+            return res.status(200).send(controlador)
+        }
+    
+        async eliminarProducto( req:express.Request, res:express.Response ) {
+            const controlador = await new inventarioController().eliminarProducto(req.body.nombre)
+            return res.status(200).send(controlador)
+        }
+    
+        async modificarProducto( req:express.Request, res:express.Response ) {
+            const controlador = await new inventarioController().modificarProducto(req.body.nombre)
+            return res.status(200).send(controlador)
+        }
+    }
+    
