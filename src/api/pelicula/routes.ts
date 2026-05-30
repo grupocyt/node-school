@@ -1,12 +1,13 @@
-import { Router } from 'express';
-import { obtenercalificacionedad, ObtenerInfoPelicula, ObtenerPrecioPelicula, ObtenerSinopsisPelicula,} from './pelicula.api';
- 
+import { Request, Response, Router } from 'express';
+import { peliculasApi } from './pelicula.api';
 
 const pelicula = Router()
 
-pelicula.get('/ObtenerInfopeliculaFunction',                  ObtenerInfoPelicula)
-pelicula.get('/ObtenerSinopsisPeliculaFunction',              ObtenerSinopsisPelicula)
-pelicula.get('/ObtenerPrecioPeliculaFunction',                ObtenerPrecioPelicula)
-pelicula.get('/ObtenerCalificacionFunction',                  obtenercalificacionedad)
+const api = new peliculasApi()
+
+pelicula.get('/NombrePelicula',                 (req:Request, res:Response) => api.obtenerNombrePelicula(req,res))
+pelicula.get('/Sinopsis',                       (req:Request, res:Response) => api.otenerSinopsisPelicula(req,res))
+pelicula.get('/PrecioPelicula',                 (req:Request, res:Response) => api.otenerPrecioPelicula(req,res))
+pelicula.get('/Edad',                           (req:Request, res:Response) => api.obtenercalificacionedad(req,res))
 
 export default pelicula
