@@ -1,22 +1,22 @@
-export class AutobusController {
+export class autobusController {
 
-        async obtenerInfoAutobus () : Promise<string> {
-        const respuesta:string = `Informacion del autobus`;
+    async obtenerInfoAutobus (nombre:string ): Promise<string> {
+        const respuesta:string = `Informacion del autobus ${nombre}`;
         return respuesta;
     }
 
-  async obtenerInfoHorarios () : Promise<string> {
-        const respuesta:string = `Informacion del horario del autobus`;
+    async obtenerInfoHorarios (nombre:string): Promise<string> {
+        const respuesta:string = `Horario del autobus ${nombre}`;
         return respuesta;
     }
 
-  async obtenerInfoRecorrido () : Promise<string> {
-        const respuesta:string = `Informacion del puesto del recorrido del autobus`;
+    async obtenerInfoRecorrido (nombre:string): Promise<string> {
+        const respuesta:string = `Informacion del recorrido del autobus ${nombre}`;
         return respuesta;
     }
 
-     async obtenerInfoEstadoAutobus () : Promise<string> {
-        const respuesta:string = `Informacion del estado del autobus`;
+    async obtenerInfoEstadoAutobus (nombre:string): Promise<string> {
+        const respuesta:string = `Informacion del estado del autobus ${nombre}`;
         return respuesta;
     }
 
