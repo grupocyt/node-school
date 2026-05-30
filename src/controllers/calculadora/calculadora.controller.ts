@@ -23,4 +23,4 @@ export class CalculadoraController {
         const respuesta:string = `El resultado de la division es ${resultado}`;
         return respuesta;
     }
-}
+} 
