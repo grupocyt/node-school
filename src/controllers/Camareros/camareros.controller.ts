@@ -1,26 +1,24 @@
 export class camareroscontroller {
 
-    async ObtenerInfoCamareroFunction () : Promise<string> {
+    async obtenerCamarero (nombre:string) : Promise<string> {
         const respuesta:string = `Informacion del camarero`;
         return respuesta;
     }
 
-  async ObtenerInfoHorarioCamareroFunction () : Promise<string> {
+  async obtenerHorarioCamarero ( nombre:string ) : Promise<string> {
         const respuesta:string = `Informacion del horario del camarero`;
         return respuesta;
     }
 
-  async ObtenerInfoPuestoDelCamareroFunction () : Promise<string> {
+  async obtenerPuestoDelCamarero (nombre:string) : Promise<string> {
         const respuesta:string = `Informacion del puesto del camarero`;
         return respuesta;
     }
 
-     async ObtenerInfoFuncionesDelCamareroFunction () : Promise<string> {
+     async obtenerFuncionesDelCamarero (nombre:string) : Promise<string> {
         const respuesta:string = `Informacion de las funciones del camarero`;
         return respuesta;
     }
 
 }
   
-
-

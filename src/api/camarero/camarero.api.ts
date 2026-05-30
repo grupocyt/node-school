@@ -1,22 +1,27 @@
 import express from 'express'
-import { camareroscontroller } from '../../controllers/Camareros/camareros.controller'
 
-export async function obtenerinfocamarero( req:express.Request, res:express.Response ) {
-    const controlador = await new camareroscontroller().obtenerinfocamarero()
-    return res.status(200).send(controlador)
-}
+import { camareroscontroller } from '../../controllers/Camareros/camareros.controller';
 
-export async function obtenerinfohorariocamarero( req:express.Request, res:express.Response ) {
-    const controlador = await new camareroscontroller().obtenerinfohorariocamarero()
-    return res.status(200).send(controlador)
-}
+export class CamareroApi {
 
-export async function obtenerinfofuncionesdelcamarero( req:express.Request, res:express.Response ) {
-    const controlador = await new camareroscontroller().obtenerinfofuncionesdelcamarero()
-    return res.status(200).send(controlador)
-}
+    async obtenerCamarero( req:express.Request, res:express.Response ) {  
+        const controlador = await new camareroscontroller().obtenerCamarero(req.body.nombre)
+        return res.status(200).send(controlador)
+    }
 
-export async function obtenerinfopuestodelcamarero( req:express.Request, res:express.Response ) {
-    const controlador = await new camareroscontroller().obtenerinfopuestodelcamarero()
-    return res.status(200).send(controlador)
+    async obtenerHorarioCamarero( req:express.Request, res:express.Response ) {
+        const controlador = await new camareroscontroller().obtenerHorarioCamarero(req.body.nombre)
+        return res.status(200).send(controlador)
+    }
+
+    async obtenerPuestoDelCamarero( req:express.Request, res:express.Response ) {
+        const controlador = await new camareroscontroller().obtenerPuestoDelCamarero(req.body.nombre)
+        return res.status(200).send(controlador)
+    }
+
+    async obtenerFuncionesDelCamarero( req:express.Request, res:express.Response ) {
+        const controlador = await new camareroscontroller().obtenerFuncionesDelCamarero(req.body.nombre)
+        return res.status(200).send(controlador)
+    }
+
 }
