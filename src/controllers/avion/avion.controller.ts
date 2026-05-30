@@ -1,4 +1,4 @@
-export class MoteroController {
+export class AvionController {
 
     async registrarAvion ( nombre:string ) : Promise<string> {
         const respuesta:string = `El avion ${nombre} ha sido registrado correctamente`;
