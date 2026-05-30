@@ -1,6 +1,6 @@
 import express from 'express'
 
-import { camareroscontroller } from '../../controllers/Camareros/camareros.controller';
+import { camareroscontroller } from '../../controllers/camareros/camareros.controller';
 
 export class CamareroApi {
 

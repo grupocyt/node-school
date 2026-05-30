@@ -1,6 +1,6 @@
 import express from 'express'
 
-import { inventarioController} from '../../controllers/Inventario/inventario.controller';
+import { inventarioController} from '../../controllers/inventario/inventario.controller';
 
 export class inventarioApi {
 

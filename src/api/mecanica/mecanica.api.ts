@@ -1,5 +1,5 @@
 import express from 'express'
-import { MecanicaController } from '../../controllers/Mecanica/mecanica.controller'
+import { MecanicaController } from '../../controllers/mecanica/mecanica.controller'
 
 export class MecanicaApi {
 

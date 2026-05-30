@@ -1,6 +1,6 @@
 import express from 'express'
 
-import { peliculasController } from '../../controllers/Peliculas/peliculas.controller'
+import { peliculasController } from '../../controllers/peliculas/peliculas.controller'
 
 export class peliculasApi {
 
