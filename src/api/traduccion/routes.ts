@@ -1,14 +1,13 @@
-import { Router } from 'express' 
-import { comoestasTraduccionFunction, estaslocoTraduccionFunction, HolaTraduccionFunction, queedadtienesTraduccionFunction } from './traduccion.api'
-   
+import { Request, Response, Router } from 'express';
+import { traduccionApi } from './traduccion.api';
+ 
 const traduccion = Router()
- 
-traduccion.get( '/hola',          HolaTraduccionFunction )
-traduccion.get( '/comoestas',     comoestasTraduccionFunction )
-traduccion.get( '/quedadtienes',     queedadtienesTraduccionFunction )
-traduccion.get( '/estasloco',     estaslocoTraduccionFunction )
 
+const api = new traduccionApi()
 
+traduccion.get('/Autobus',                              (req:Request, res:Response) => api.holaTraduccion(req,res))
+traduccion.get('/Autobus',                              (req:Request, res:Response) => api.comoEstasTraduccion(req,res))
+traduccion.get('/Autobus',                              (req:Request, res:Response) => api.queEdadTienesTraduccion(req,res))
+traduccion.get('/Autobus',                              (req:Request, res:Response) => api.estasLocoTraduccion(req,res))
 
- 
-export default traduccion   
+export default traduccion

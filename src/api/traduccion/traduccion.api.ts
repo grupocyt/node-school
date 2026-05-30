@@ -1,28 +1,27 @@
 import express from 'express'
-  
-export async function HolaTraduccionFunction( req:express.Request, res:express.Response ) {
- 
-       const hola:string = "hello";
 
-    return res.status(200).send( hola  ) 
-} 
-export async function comoestasTraduccionFunction( req:express.Request, res:express.Response ) {
- 
-       const comoestas:string = "how are you";
+import { traduccionController} from '../../controllers/traductor/traduccion.controller';
 
-    return res.status(200).send( comoestas  ) 
-} 
+export class traduccionApi {
 
-export async function queedadtienesTraduccionFunction( req:express.Request, res:express.Response ) {
- 
-       const queedadtienes:string = "how old you";
-
-    return res.status(200).send( queedadtienes  ) 
-
-} 
-export async function estaslocoTraduccionFunction( req:express.Request, res:express.Response ) {
- 
-       const estasloco:string = "you are crazy";
-
-    return res.status(200).send( estasloco ) 
-} 
+        async holaTraduccion( req:express.Request, res:express.Response ) {  
+            const controlador = await new traduccionController().holaTraduccion(req.body.nombre)
+            return res.status(200).send(controlador)
+        }
+    
+        async comoEstasTraduccion( req:express.Request, res:express.Response ) {
+            const controlador = await new traduccionController().comoEstasTraduccion(req.body.nombre)
+            return res.status(200).send(controlador)
+        }
+    
+        async queEdadTienesTraduccion( req:express.Request, res:express.Response ) {
+            const controlador = await new traduccionController().queEdadTienesTraduccion(req.body.nombre)
+            return res.status(200).send(controlador)
+        }
+    
+        async estasLocoTraduccion( req:express.Request, res:express.Response ) {
+            const controlador = await new traduccionController().estasLocoTraduccion(req.body.nombre)
+            return res.status(200).send(controlador)
+        }
+    }
+    
