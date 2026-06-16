@@ -1,27 +1,22 @@
 import express from 'express'
+import { camareroscontroller } from '../../controllers/Camareros/camareros.controller'
 
-import { camareroscontroller } from '../../controllers/camareros/camareros.controller';
+export async function obtenerinfocamarero( req:express.Request, res:express.Response ) {
+    const controlador = await new camareroscontroller().ObtenerInfoCamareroFunction()
+    return res.status(200).send(controlador)
+}
 
-export class CamareroApi {
+export async function obtenerinfohorariocamarero( req:express.Request, res:express.Response ) {
+    const controlador = await new camareroscontroller().ObtenerInfoHorarioCamareroFunction()
+    return res.status(200).send(controlador)
+}
 
-    async obtenerCamarero( req:express.Request, res:express.Response ) {  
-        const controlador = await new camareroscontroller().obtenerCamarero(req.body.nombre)
-        return res.status(200).send(controlador)
-    }
+export async function obtenerinfofuncionesdelcamarero( req:express.Request, res:express.Response ) {
+    const controlador = await new camareroscontroller().ObtenerInfoFuncionesDelCamareroFunction()
+    return res.status(200).send(controlador)
+}
 
-    async obtenerHorarioCamarero( req:express.Request, res:express.Response ) {
-        const controlador = await new camareroscontroller().obtenerHorarioCamarero(req.body.nombre)
-        return res.status(200).send(controlador)
-    }
-
-    async obtenerPuestoDelCamarero( req:express.Request, res:express.Response ) {
-        const controlador = await new camareroscontroller().obtenerPuestoDelCamarero(req.body.nombre)
-        return res.status(200).send(controlador)
-    }
-
-    async obtenerFuncionesDelCamarero( req:express.Request, res:express.Response ) {
-        const controlador = await new camareroscontroller().obtenerFuncionesDelCamarero(req.body.nombre)
-        return res.status(200).send(controlador)
-    }
-
+export async function obtenerinfopuestodelcamarero( req:express.Request, res:express.Response ) {
+    const controlador = await new camareroscontroller().ObtenerInfoPuestoDelCamareroFunction()
+    return res.status(200).send(controlador)
 }

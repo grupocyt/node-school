@@ -1,21 +1,21 @@
 export class peliculasController {
 
-    async obtenerNombrePelicula (nombre:string) : Promise<string> {
-        const respuesta:string = 'Seleccion de pelicula';
+    async obtenerinfopelicula () : Promise<string> {
+        const respuesta:string = 'Informacion de la pelicula';
         return respuesta;
     }
 
-    async obtenerSinopsisPelicula (nombre:string) : Promise<string> {
+    async ObtenerSinopsisPelicula () : Promise<string> {
         const respuesta:string = "sinopsis";
         return respuesta;
     }
 
-    async obtenerPrecioPelicula (nombre:string) : Promise<string> {
+    async ObtenerPrecioPelicula () : Promise<string> {
         const respuesta:string = "precio de la pelicula";
         return respuesta;
     }
 
-    async obtenerCalificacionEdad (nombre:string) : Promise<string> {
+    async ObtenerCalificacionEdad () : Promise<string> {
         const respuesta:string = "obtener edad recomendada";
         return respuesta;
     }

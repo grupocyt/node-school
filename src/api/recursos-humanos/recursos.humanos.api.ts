@@ -1,33 +1,19 @@
 import express from 'express'
 
-import { recursosHumanosController} from '../../controllers/recursoshumanos/recursos-humanos.controller';
+export async function ObtenerEmpleadosFunction( req:express.Request, res:express.Response ) {
 
-export class recursosApi {
+        const respuesta:string = "Lista de empleados de Recursos Humanos";
 
-        async añadirEmpleado( req:express.Request, res:express.Response ) {  
-            const controlador = await new recursosHumanosController().añadirEmpleado(req.body.nombre)
-            return res.status(200).send(controlador)
-        }
-    
-        async obtenerDatosEmpleado( req:express.Request, res:express.Response ) {
-            const controlador = await new recursosHumanosController().obtenerDatosEmpleado(req.body.nombre)
-            return res.status(200).send(controlador)
-        }
-    
-        async modificarDatosEmpleado( req:express.Request, res:express.Response ) {
-            const controlador = await new recursosHumanosController().modificarDatosEmpleado(req.body.nombre)
-            return res.status(200).send(controlador)
-        }
-    
-        async eliminarEmpleado( req:express.Request, res:express.Response ) {
-            const controlador = await new recursosHumanosController().eliminarEmpleado(req.body.nombre)
-            return res.status(200).send(controlador)
-        }
-        
-        async nominaEmpleado( req:express.Request, res:express.Response ) {
-            const controlador = await new recursosHumanosController().nominaEmpleado(req.body.nombre)
-            return res.status(200).send(controlador)
-        }
+    return res.status(200).send(respuesta)
+}
 
-    }
-    
+export async function ContratarEmpleadoFunction( req:express.Request, res:express.Response ) {
+const respuesta = {
+    mensaje:"Usted ha contratado a un nuevo empleado. Estos son sus datos",
+    departamento:"Recursos Humanos",
+    fechaInicio:"17PM",
+    datosEmpleado:req.body
+}
+
+    return res.status(200).send(respuesta)
+}

@@ -1,27 +1,19 @@
 import express from 'express'
 
-import { CalculadoraController } from '../../controllers/calculadora/calculadora.controller';
+export async function ObtenerResultadoFunction( req:express.Request, res:express.Response ) {
 
-export class CalculadoraApi {
+        const respuesta:string = "Resultado de la operacion de la calculadora";
 
-    async sumar( req:express.Request, res:express.Response ) {
-        const controlador = await new CalculadoraController().sumar(req.body.num1, req.body.num2)
-        return res.status(200).send(controlador)
-    }
+    return res.status(200).send(respuesta)
+}
 
-    async restar( req:express.Request, res:express.Response ) {
-        const controlador = await new CalculadoraController().restar(req.body.num1, req.body.num2)
-        return res.status(200).send(controlador)
-    }
+export async function CalcularOperacionFunction( req:express.Request, res:express.Response ) {
+const respuesta = {
+    mensaje:"Se ha realizado la operacion correctamente. Estos son los datos de la suma ficticia",
+    operacion:"Suma",
+    resultado:"0",
+    datosOperacion:req.body
+}
 
-    async multiplicar( req:express.Request, res:express.Response ) {
-        const controlador = await new CalculadoraController().multiplicar(req.body.num1, req.body.num2)
-        return res.status(200).send(controlador)
-    }
-
-    async dividir( req:express.Request, res:express.Response ) {
-        const controlador = await new CalculadoraController().dividir(req.body.num1, req.body.num2)
-        return res.status(200).send(controlador)
-    }
-
+    return res.status(200).send(respuesta)
 }

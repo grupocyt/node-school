@@ -1,26 +1,26 @@
 export class MecanicaController {
 
-    async obtenerInfoTaller (nombre:string) : Promise<string> {
+    async ObtenerInfoTallerFunction () : Promise<string> {
         const respuesta:string = `Informacion del taller`;
         return respuesta;
     }
 
-    async obtenerInfoDuenoTaller (nombre:string) : Promise<string> {
-        const respuesta:string = "Informacion del dueño del taller";
+    async ObtenerInfoDuenoTallerFunction () : Promise<string> {
+        const respuesta:string = "Informacion dueño taller";
         return respuesta;
     }
 
-    async obtenerLocalIzquierdo (nombre:string) : Promise<string> {
+    async ObtenerLocalIzquierdoFunction () : Promise<string> {
         const respuesta:string = "informacion del local izquierdo";
         return respuesta;
     }
 
-    async obtenerLocalDerecho (nombre:string) : Promise<string> {
+    async ObtenerLocalDerechoFunction () : Promise<string> {
         const respuesta:string = "obtener informacion del local derecho";
         return respuesta;
     }
 
-    async obtenerColorDelTaller (nombre:string) : Promise<string> {
+    async ObtenerColorDelTallerFunction () : Promise<string> {
         const respuesta:string = "obtener el color del taller";
         return respuesta;
     }

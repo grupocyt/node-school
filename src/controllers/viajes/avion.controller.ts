@@ -1,4 +1,4 @@
-export class viajesController {
+export class AvionController {
 
     async despegar ( nombre:string ) : Promise<string> {
        const respuesta:string = `El avión ${nombre} está despegando`;
@@ -10,12 +10,12 @@ export class viajesController {
       return respuesta;
     } 
 
-    async escala ( nombre:string ) : Promise<string> {
-       const respuesta:string = `El avión ${nombre} hará escala`;
+    async repostar ( nombre:string ) : Promise<string> {
+       const respuesta:string = `El avión ${nombre} está repostando`;
       return respuesta;
     } 
-    async retraso ( nombre:string ) : Promise<string> {
-       const respuesta:string = `El avión ${nombre} va con retraso`;
+    async mantenimiento ( nombre:string ) : Promise<string> {
+       const respuesta:string = `El avión ${nombre} está en mantenimiento`;
       return respuesta;
     } 
 }

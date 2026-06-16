@@ -1,27 +1,22 @@
 import express from 'express'
+import { autobuscontroller } from '../../controllers/autobus/autobus.controller'
 
-import { autobusController} from '../../controllers/autobus/autobus.controller';
+export async function ObtenerInfoAutobusFunction ( req:express.Request, res:express.Response ) {
+    const controlador =  await new autobuscontroller().ObtenerInfoAutobus()
+    return res.status(200).send(controlador)
+}
 
-export class autobusApi {
+export async function ObtenerInfoHorariosFunction ( req:express.Request, res:express.Response ) {
+    const controlador = await new autobuscontroller().ObtenerInfoHorarios()
+    return res.status(200).send(controlador)
+}
 
-        async obtenerInfoAutobus( req:express.Request, res:express.Response ) {  
-            const controlador = await new autobusController().obtenerInfoAutobus(req.body.nombre)
-            return res.status(200).send(controlador)
-        }
-    
-        async obtenerInfoHorarios( req:express.Request, res:express.Response ) {
-            const controlador = await new autobusController().obtenerInfoHorarios(req.body.nombre)
-            return res.status(200).send(controlador)
-        }
-    
-        async obtenerInfoRecorrido( req:express.Request, res:express.Response ) {
-            const controlador = await new autobusController().obtenerInfoRecorrido(req.body.nombre)
-            return res.status(200).send(controlador)
-        }
-    
-        async obtenerInfoEstadoAutobus( req:express.Request, res:express.Response ) {
-            const controlador = await new autobusController().obtenerInfoEstadoAutobus(req.body.nombre)
-            return res.status(200).send(controlador)
-        }
-    }
-    
+export async function ObtenerInfoEstadoAutobusFunction( req:express.Request, res:express.Response ) {
+    const controlador = await new autobuscontroller().ObtenerInfoEstadoAutobus()
+    return res.status(200).send(controlador)
+}
+
+export async function ObtenerInfoRecorridoFunction( req:express.Request, res:express.Response ) {
+    const controlador = await new autobuscontroller().ObtenerInfoRecorrido()
+    return res.status(200).send(controlador)
+}

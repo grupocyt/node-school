@@ -1,13 +1,12 @@
-import { Request, Response, Router } from 'express';
-import { autobusApi } from './autobus.api';
+import { Router } from 'express';
+import { ObtenerInfoAutobusFunction, ObtenerInfoEstadoAutobusFunction, ObtenerInfoHorariosFunction, ObtenerInfoRecorridoFunction } from './autobus.api';
  
+
 const autobus = Router()
 
-const api = new autobusApi()
-
-autobus.get('/Autobus',                              (req:Request, res:Response) => api.obtenerInfoAutobus(req,res))
-autobus.get('/Autobus',                              (req:Request, res:Response) => api.obtenerInfoHorarios(req,res))
-autobus.get('/Autobus',                              (req:Request, res:Response) => api.obtenerInfoRecorrido(req,res))
-autobus.get('/Autobus',                              (req:Request, res:Response) => api.obtenerInfoEstadoAutobus(req,res))
+autobus.get('/ObtenerInfoAutobusFunction',                   ObtenerInfoAutobusFunction)
+autobus.get('/ObtenerInfoHorarios',                          ObtenerInfoHorariosFunction)
+autobus.get('/ObtenerInfoRecorrido',                         ObtenerInfoRecorridoFunction)
+autobus.get('/ObtenerInfoEstadoAutobus',                     ObtenerInfoEstadoAutobusFunction)
 
 export default autobus

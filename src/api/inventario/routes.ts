@@ -1,13 +1,9 @@
-import { Request, Response, Router } from 'express';
-import { inventarioApi } from './inventario.api';
- 
-const Inventario = Router()
+import { Router } from 'express';
+import { ObtenerInventarioFunction, AgregarProductoFunction } from './inventario.api';
 
-const api = new inventarioApi()
+const inventario = Router()
 
-Inventario.get('/inventario/obtener',                             (req:Request, res:Response) => api.obtenerInventario(req,res))
-Inventario.get('/inventario/añadir',                              (req:Request, res:Response) => api.añadirProducto(req,res))
-Inventario.get('/inventario/eliminar',                            (req:Request, res:Response) => api.eliminarProducto(req,res))
-Inventario.get('/inventario/modificar',                           (req:Request, res:Response) => api.modificarProducto(req,res))
+inventario.get('/inventario',  ObtenerInventarioFunction)
+inventario.post('/inventario', AgregarProductoFunction)
 
-export default Inventario
+export default inventario

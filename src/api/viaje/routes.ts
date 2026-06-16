@@ -1,13 +1,10 @@
-import { Request, Response, Router } from 'express';
-import { viajesApi } from './viaje.api';
- 
+import { Router } from 'express';
+import { ComprarVueloMadridBarcelonaFunction, MadridBarcelonafunction } from './viaje.api';
+
 const viaje = Router()
-
-const api = new viajesApi()
-
-viaje.get('/Despegando',                              (req:Request, res:Response) => api.despegar(req,res))
-viaje.get('/Aterrizando',                             (req:Request, res:Response) => api.aterrizar(req,res))
-viaje.get('/Con escala',                              (req:Request, res:Response) => api.escala(req,res))
-viaje.get('/Con retraso',                             (req:Request, res:Response) => api.retraso(req,res))
-
+ 
+// 2 forma "rutas": utilizamos las palabras reservadas GET, POST, PATCH, DELETE, PUT, HEADER para conectar con la funcion
+viaje.get('/ma-bc', MadridBarcelonafunction)
+viaje.post('/ma-bc', ComprarVueloMadridBarcelonaFunction)
+ 
 export default viaje
