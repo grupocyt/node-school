@@ -1,0 +1,12 @@
+[
+    {
+        "id": "uuid",
+        "owner_name": "Juan García",
+        "owner_email": "juan@email.com",
+        "zone": "pista",
+        "seat": "A-23",
+        "price": 45.00,
+        "status": "active",
+        "purchase_date": "2026-05-03"
+    }
+]
