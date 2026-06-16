@@ -12,11 +12,11 @@ export async function obtenerinfohorariocamarero( req:express.Request, res:expre
 }
 
 export async function obtenerinfofuncionesdelcamarero( req:express.Request, res:express.Response ) {
-    const controlador = await new camareroscontroller().obtenerinfofuncionesdelcamarero()
+    const controlador = await new camareroscontroller().ObtenerInfoFuncionesDelCamareroFunction()
     return res.status(200).send(controlador)
 }
 
 export async function obtenerinfopuestodelcamarero( req:express.Request, res:express.Response ) {
-    const controlador = await new camareroscontroller().obtenerinfopuestodelcamarero()
+    const controlador = await new camareroscontroller().ObtenerInfoPuestoDelCamareroFunction()
     return res.status(200).send(controlador)
 }
