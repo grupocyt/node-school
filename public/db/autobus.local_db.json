@@ -1,10 +1,244 @@
-[{
-    "nombre":"amt azul",
-    "marca":"bmw",
-    "color":"rojo"
-},
 {
-    "nombre":"amt azul 1",
-    "marca":"bmw",
-    "color":"rojo"
-}]
+    "autobuses": [
+        {
+            "id": 1,
+            "matricula": "1234-ABC",
+            "marca": "Mercedes",
+            "modelo": "Citaro",
+            "año": 2019,
+            "kilometraje": 152000,
+            "capacidad": 45,
+            "id_conductor": 1,
+            "estado": "en_servicio",
+            "horarios": [
+                {
+                    "salida": "08:00",
+                    "llegada": "09:30",
+                    "diasServicio": ["lunes", "martes", "miércoles", "jueves", "viernes"]
+                }
+            ],
+            "recorrido": [
+                { "parada": 1, "nombre": "Estación Central", "hora": "08:00" },
+                { "parada": 2, "nombre": "Plaza Mayor", "hora": "08:20" },
+                { "parada": 3, "nombre": "Hospital", "hora": "08:45" },
+                { "parada": 4, "nombre": "Aeropuerto", "hora": "09:30" }
+            ]
+        },
+        {
+            "id": 2,
+            "matricula": "5678-DEF",
+            "marca": "Volvo",
+            "modelo": "B8R",
+            "año": 2020,
+            "kilometraje": 98000,
+            "capacidad": 50,
+            "id_conductor": 2,
+            "estado": "en_servicio",
+            "horarios": [
+                {
+                    "salida": "09:00",
+                    "llegada": "10:30",
+                    "diasServicio": ["lunes", "martes", "miércoles", "jueves", "viernes"]
+                }
+            ],
+            "recorrido": [
+                { "parada": 1, "nombre": "Puerto", "hora": "09:00" },
+                { "parada": 2, "nombre": "Centro Comercial", "hora": "09:20" },
+                { "parada": 3, "nombre": "Universidad", "hora": "09:50" },
+                { "parada": 4, "nombre": "Estadio", "hora": "10:30" }
+            ]
+        },
+        {
+            "id": 3,
+            "matricula": "9101-GHI",
+            "marca": "Scania",
+            "modelo": "Citywide",
+            "año": 2018,
+            "kilometraje": 210000,
+            "capacidad": 40,
+            "id_conductor": 3,
+            "estado": "en_mantenimiento",
+            "horarios": [
+                {
+                    "salida": "07:00",
+                    "llegada": "08:00",
+                    "diasServicio": ["lunes", "miércoles", "viernes"]
+                }
+            ],
+            "recorrido": [
+                { "parada": 1, "nombre": "Barrio Norte", "hora": "07:00" },
+                { "parada": 2, "nombre": "Mercado Central", "hora": "07:20" },
+                { "parada": 3, "nombre": "Ayuntamiento", "hora": "07:40" },
+                { "parada": 4, "nombre": "Parque Industrial", "hora": "08:00" }
+            ]
+        },
+        {
+            "id": 4,
+            "matricula": "1121-JKL",
+            "marca": "MAN",
+            "modelo": "Lion's City",
+            "año": 2021,
+            "kilometraje": 45000,
+            "capacidad": 55,
+            "id_conductor": 4,
+            "estado": "en_servicio",
+            "horarios": [
+                {
+                    "salida": "10:00",
+                    "llegada": "11:30",
+                    "diasServicio": ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado"]
+                }
+            ],
+            "recorrido": [
+                { "parada": 1, "nombre": "Terminal Bus", "hora": "10:00" },
+                { "parada": 2, "nombre": "Hotel Gran Vía", "hora": "10:15" },
+                { "parada": 3, "nombre": "Museo Nacional", "hora": "10:45" },
+                { "parada": 4, "nombre": "Playa Central", "hora": "11:30" }
+            ]
+        },
+        {
+            "id": 5,
+            "matricula": "3141-MNO",
+            "marca": "Iveco",
+            "modelo": "Crossway",
+            "año": 2017,
+            "kilometraje": 320000,
+            "capacidad": 48,
+            "id_conductor": 5,
+            "estado": "fuera_de_servicio",
+            "horarios": [
+                {
+                    "salida": "06:30",
+                    "llegada": "08:00",
+                    "diasServicio": ["lunes", "martes", "miércoles", "jueves", "viernes"]
+                }
+            ],
+            "recorrido": [
+                { "parada": 1, "nombre": "Polígono Sur", "hora": "06:30" },
+                { "parada": 2, "nombre": "Colegio Público", "hora": "06:50" },
+                { "parada": 3, "nombre": "Instituto", "hora": "07:15" },
+                { "parada": 4, "nombre": "Biblioteca", "hora": "08:00" }
+            ]
+        },
+        {
+            "id": 6,
+            "matricula": "5161-PQR",
+            "marca": "Mercedes",
+            "modelo": "Tourismo",
+            "año": 2022,
+            "kilometraje": 18000,
+            "capacidad": 60,
+            "id_conductor": 6,
+            "estado": "en_servicio",
+            "horarios": [
+                {
+                    "salida": "11:00",
+                    "llegada": "13:00",
+                    "diasServicio": ["sábado", "domingo"]
+                }
+            ],
+            "recorrido": [
+                { "parada": 1, "nombre": "Estación AVE", "hora": "11:00" },
+                { "parada": 2, "nombre": "Centro Ciudad", "hora": "11:30" },
+                { "parada": 3, "nombre": "Zona Comercial", "hora": "12:00" },
+                { "parada": 4, "nombre": "Parque Natural", "hora": "13:00" }
+            ]
+        },
+        {
+            "id": 7,
+            "matricula": "7181-STU",
+            "marca": "Volvo",
+            "modelo": "B11R",
+            "año": 2016,
+            "kilometraje": 410000,
+            "capacidad": 42,
+            "id_conductor": 7,
+            "estado": "en_mantenimiento",
+            "horarios": [
+                {
+                    "salida": "14:00",
+                    "llegada": "15:30",
+                    "diasServicio": ["lunes", "martes", "miércoles", "jueves", "viernes"]
+                }
+            ],
+            "recorrido": [
+                { "parada": 1, "nombre": "Barrio Este", "hora": "14:00" },
+                { "parada": 2, "nombre": "Clínica", "hora": "14:20" },
+                { "parada": 3, "nombre": "Supermercado", "hora": "14:50" },
+                { "parada": 4, "nombre": "Residencia", "hora": "15:30" }
+            ]
+        },
+        {
+            "id": 8,
+            "matricula": "9202-VWX",
+            "marca": "Scania",
+            "modelo": "Interlink",
+            "año": 2023,
+            "kilometraje": 5000,
+            "capacidad": 52,
+            "id_conductor": 8,
+            "estado": "en_servicio",
+            "horarios": [
+                {
+                    "salida": "16:00",
+                    "llegada": "17:30",
+                    "diasServicio": ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+                }
+            ],
+            "recorrido": [
+                { "parada": 1, "nombre": "Aeropuerto", "hora": "16:00" },
+                { "parada": 2, "nombre": "Hotel Palacio", "hora": "16:20" },
+                { "parada": 3, "nombre": "Catedral", "hora": "16:50" },
+                { "parada": 4, "nombre": "Puerto Deportivo", "hora": "17:30" }
+            ]
+        },
+        {
+            "id": 9,
+            "matricula": "1222-YZA",
+            "marca": "MAN",
+            "modelo": "Lion's Coach",
+            "año": 2015,
+            "kilometraje": 520000,
+            "capacidad": 38,
+            "id_conductor": 9,
+            "estado": "fuera_de_servicio",
+            "horarios": [
+                {
+                    "salida": "18:00",
+                    "llegada": "19:30",
+                    "diasServicio": ["martes", "jueves", "sábado"]
+                }
+            ],
+            "recorrido": [
+                { "parada": 1, "nombre": "Barrio Oeste", "hora": "18:00" },
+                { "parada": 2, "nombre": "Piscina Municipal", "hora": "18:20" },
+                { "parada": 3, "nombre": "Polideportivo", "hora": "18:50" },
+                { "parada": 4, "nombre": "Parque Central", "hora": "19:30" }
+            ]
+        },
+        {
+            "id": 10,
+            "matricula": "3242-BCD",
+            "marca": "Iveco",
+            "modelo": "Magelys",
+            "año": 2020,
+            "kilometraje": 87000,
+            "capacidad": 46,
+            "id_conductor": 10,
+            "estado": "en_servicio",
+            "horarios": [
+                {
+                    "salida": "20:00",
+                    "llegada": "21:30",
+                    "diasServicio": ["viernes", "sábado", "domingo"]
+                }
+            ],
+            "recorrido": [
+                { "parada": 1, "nombre": "Zona Universitaria", "hora": "20:00" },
+                { "parada": 2, "nombre": "Teatro Municipal", "hora": "20:20" },
+                { "parada": 3, "nombre": "Restaurante Central", "hora": "20:50" },
+                { "parada": 4, "nombre": "Discoteca Norte", "hora": "21:30" }
+            ]
+        }
+    ]
+}
